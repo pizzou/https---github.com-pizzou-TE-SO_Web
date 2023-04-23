@@ -27,8 +27,13 @@ const Ours = () => {
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row gap-16'>
 
+            <motion.div 
+            variants={fadeIn('right', 0.3)}
+            initial ='hidden'
+            whileInView={'show'}
+            viewport={{once:false, amount:0.3}}
             
-    <div className='flex-1 lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12'>
+     className='flex-1 lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12'>
         <h3 className='h3 max-w-[455px] mb-16'>OUR COMPANY</h3>
         <h2 className='h2 text-grey-500 mb-6'>We’ve been thriving in <span className="text-cyan-600">5 years</span></h2>
 
@@ -36,25 +41,30 @@ const Ours = () => {
 
         <button className='btn btn-sm text-black mb-6'>Join Us</button>
 
+        </motion.div>
 
-
-    </div>
-    <div className='flex-1'>
+    
+    <motion.div 
+    variants={fadeIn('left', 0.5)}
+    initial ='hidden'
+    whileInView={'show'}
+    viewport={{once:false, amount:0.3}}
+    className='flex-1'>
         <div>
         {
             ours.map((ours, index)=>{
                 const {name, description, link}= ours;
                 return(
-                    <div className='border-b border-white/20 h-[146px] mb[38px] flex ' key={index}>
+                    <div className='border-b border-black/20 h-[146px] mb[38px] flex ' key={index}>
                     <div className='max-w-[476px]'>
                         <h4 className='text-[20px] tracking-wider font-Poppins font-semibold mb-6'>{name}</h4 >
-                        <p className='font-secondary leading-tight'>{description}</p>
+                        <p className='font-secondary leading-tight cursor-pointer hover:text-blue-500'>{description}</p>
                         </div>
                     <div className='flex flex-col flex-1 items-end'>
-                        <a href='#'className='btn w-9 h-9 mb-[42px] flex'>
+                        <a href='/#'className='btn w-9 h-9 mb-[42px] flex'>
                             <BsArrowUpRight/>
                         </a>
-                        <a href='#' className='text-gradient text-sm'>{link}</a>
+                        <a href='/#' className='text-gradient text-sm'>{link}</a>
                     </div>
                 </div>
                 ); 
@@ -66,7 +76,7 @@ const Ours = () => {
 </div>
 
 
-    </div>
+    </motion.div>
     </div>
         </div>
        

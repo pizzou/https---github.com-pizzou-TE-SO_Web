@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-center py-10 mt-6 text-sm text-gray-600">
-        Copyright © 2023. All Right Reserved.
+        Copyright © 2023 TE-SO Ltd. All Right Reserved.
       </p>
     </footer>
   );

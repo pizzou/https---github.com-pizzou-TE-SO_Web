@@ -26,7 +26,7 @@ const NavLinks = () => {
   return (
     <>
       {Links.map((link, i) => (
-        <li key={i} className="font-semibold hover:text-primary">
+        <li key={i} className="font-semibold hover:text-primary cursor-pointer">
           <a href={link.link}>{link.name}</a>
         </li>
       ))}

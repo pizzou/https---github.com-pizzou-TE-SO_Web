@@ -1,9 +1,6 @@
 import React from "react";
 import com1 from "../assets/teso.jpg";
-import com2 from "../assets/com-2.png";
-import com3 from "../assets/com-3.png";
-import com4 from "../assets/com-4.png";
-import com5 from "../assets/com-5.png";
+
 const Companies = () => {
   return (
     <section className="text-center">

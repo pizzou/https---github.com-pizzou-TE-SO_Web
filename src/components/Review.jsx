@@ -13,8 +13,9 @@ const Review = () => {
       <h1 className="md:text-4xl text-2xl mt-1 font-semibold">
       Why do people praise about TE-SO?
       </h1>
-      <div className="my-6">
+      <div className="my-6 justify-center">
         <Swiper
+        
           loop={true}
           grabCursor={true}
           spaceBetween={30}
@@ -28,7 +29,7 @@ const Review = () => {
               slidesPerView: 3,
             },
             600: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             400: {
               slidesPerView: 1,

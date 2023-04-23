@@ -5,7 +5,7 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex justify-between">
-      <h1 className="h-9 cursor-pointer text-blue-800" >TE-SO Ltd</h1>
+      <h1 className="h-9 cursor-pointer text-blue-800 animate-bounce" >TE-SO Ltd</h1>
       <ul className="md:flex hidden items-center gap-10">
         <NavLinks />
       </ul>

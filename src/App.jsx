@@ -9,6 +9,12 @@ import Footer from "./components/Footer/Footer";
 
 import Features from './components/Features'
 import Ours from "./components/Ours";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Hire from "./components/Hire";
+import Video from "./components/Video";
+import Explain from "./components/Explain";
+import Contact from "./components/Contact";
 const App = () => {
   const contents = [
     {
@@ -30,14 +36,23 @@ const App = () => {
   return (
     <div className="font-Poppins">
       <Headers />
+      <Projects/>
+      
+      <Hire/>
       <Blog content={contents[0]} />
-      <Companies />
+      {/* <Companies /> */}
       <Features/>
       <Ours/>
+      <Video/>
+
+      <Explain/>
+
       
-      <Blog content={contents[1]} alternative={true} />
-      <Blog content={contents[2]} />
+      
+      {/* <Blog content={contents[1]} alternative={true} />
+      <Blog content={contents[2]} /> */}
       <Review />
+      <Contact/>
       <Footer />
     </div>
   );

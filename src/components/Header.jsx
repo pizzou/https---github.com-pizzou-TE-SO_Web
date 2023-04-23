@@ -6,7 +6,12 @@ import ButtonOutline from "./ButtonOutline";
 import Icon1 from "../assets/leader.jpg";
 import Icon2 from "../assets/icon-2.png";
 import Icon3 from "../assets/dev.png";
+import {motion} from 'framer-motion'
+import { fadeIn } from '../variants';
+import Design from "./Design";
+import About from "./About";
 const Header = () => {
+  
   const Info = [
     {
       icon: Icon1,
@@ -25,10 +30,20 @@ const Header = () => {
     },
   ];
   return (
+
+    
+
     <section className="bg-Hero bg-cover bg-center  py-4 md:px-24 px-4">
       <Nav />
-      <div className="flex md:flex-row flex-col gap-5 pt-20">
-        <div className="flex-1">
+      <Design/>
+      <About />
+      <div className="flex md:flex-row flex-col gap-5 pt-20 absolute top-0 ">
+        <motion.div 
+        variants={fadeIn('right', 0.3)}
+        initial ='hidden'
+        whileInView={'show'}
+        viewport={{once:false, amount:0.3}}
+        className="flex-1">
           <h1
             className="md:text-5xl text-4xl font-semibold tracking-wide md:leading-tight
           leading-snug"
@@ -43,13 +58,20 @@ const Header = () => {
             <ButtonFill>Contact Us</ButtonFill>
             <ButtonOutline />
           </div>
-        </div>
-        <div className="flex-1  flex justify-center">
-          <img src={HeroImg} alt="hero" className="h-2/3 w-full" />
-        </div>
+        </motion.div>
+        <motion.div 
+    variants={fadeIn('left', 0.5)}
+    initial ='hidden'
+    whileInView={'show'}
+    viewport={{once:false, amount:0.3}}
+        className="flex-1  flex justify-center">
+          <img src={HeroImg} alt="hero" className="w-full rounded-full h-98 " />
+        </motion.div>
       </div>
 
-      <div className="bg-white shadow-2xl flex md:flex-row flex-col md:-mt-48  gap-10 md:p-14 p-10 mt-96 rounded-md">
+      
+
+      <div className=" flex md:flex-row flex-col md:-mt-98  gap-10 md:p-14 p-10 -mt-16 rounded-md h-98 -top-0">
         {Info.map((info, i) => (
           <div key={i}>
             <img src={info.icon} alt="icon" className="h-16 mt-48 rounded-full" />
@@ -67,7 +89,10 @@ const Header = () => {
           EXPLORE ALL OUR SERVICES.
         </span>
       </p>
+     
     </section>
+
+    
   );
 };
 
